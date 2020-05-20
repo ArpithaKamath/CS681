@@ -1,9 +1,8 @@
 package edu.umb.cs681.hw02;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Collections;
-import java.util.Comparator;
+
+
 
 public class Main {
 
@@ -20,6 +19,11 @@ public class Main {
 		cars.add(c3);
 		cars.add(c4);
 		//System.out.println(cars.display());
+		System.out.println("Available Cars:");
+		for(Car car:cars) {
+			car.display();
+		}
+		System.out.println("-------------------------------");
 		Integer price = cars.stream()
 				.map((Car car)-> car.getPrice())
 				.reduce(0, (result, carPrice)->{
@@ -40,7 +44,7 @@ public class Main {
 				.map((Car car)-> car.getPrice())
 				.reduce(0, (result, carPrice)->{
 				return ++result; } );
-		System.out.println("Price of the car with max-reduce(): "+count);
+		System.out.println("Price of the car with count-reduce(): "+count);
 
 	}
 }

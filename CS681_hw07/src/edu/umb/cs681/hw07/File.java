@@ -27,8 +27,8 @@ public class File {
 		try{
 			if(changed == false) return;
 			if(changed == true){
-			long difference = System.currentTimeMillis() - startTime;
-		    System.out.println("Total Elapsed Time: " + difference +"ms");
+			long difference = System.currentTimeMillis();;
+		    System.out.println("File saved at: " + difference +"ms");
 			changed = false;
 			}
 		}finally{

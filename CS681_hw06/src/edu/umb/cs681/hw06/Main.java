@@ -5,8 +5,8 @@ public class Main {
 
         try{
             System.out.println("Execute with 2 threads. ");
-            RunnablePrimeGenerator g1 = new RunnablePrimeGenerator(1L, 1000000L);
-            RunnablePrimeGenerator g2 = new RunnablePrimeGenerator(1000001L, 2000000L);
+            RunnableCancellablePrimeFactorizer g1 = new RunnableCancellablePrimeFactorizer(2489, 2, (long)Math.sqrt(2489)/2 );
+            RunnableCancellablePrimeFactorizer g2 = new RunnableCancellablePrimeFactorizer(3689, 2, (long)Math.sqrt(2489)/2 );
 
             Thread t1 = new Thread(g1);
             Thread t2 = new Thread(g2);
@@ -15,13 +15,18 @@ public class Main {
             t1.join();  t2.join();
             long endTime = System.currentTimeMillis();
             long timeElapsed =  endTime - startTime;
-            g1.getPrimes().forEach((prime)-> System.out.println(prime));
-            g2.getPrimes().forEach((prime)-> System.out.println(prime));
-
-            System.out.println("Execution time in milliseconds: " + timeElapsed); // 597 ms
+            g1.generatePrimeFactors();
+            g2.generatePrimeFactors();
+			try{
+				Thread.sleep(1000);
+			} catch(Exception e){e.printStackTrace();}
+			System.out.println("Prime Factors 1st Thread" + g1.getPrimeFactors()); 
+            System.out.println("Prime Factors 2nd Thread" + g2.getPrimeFactors()); 
+			g1.setDone();
+			g2.setDone();
 
         }catch (Exception ex){
-
+			ex.printStackTrace();
         }
     }
 }

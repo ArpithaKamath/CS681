@@ -5,11 +5,11 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
         try{
-            // Uncomment these to check execution time on multi threads
-            //Execute1Thread();
-            //Execute2Threads();
-            //Execute4Threads();
-            //Execute8Threads();
+            
+            Execute1Thread();
+            Execute2Threads();
+            Execute4Threads();
+            Execute8Threads();
             Execute16Threads();
 
         }catch (Exception ex){
@@ -29,8 +29,8 @@ public class Main {
         t1.join();  t2.join();
         long endTime2 = System.currentTimeMillis();
         long timeElapsed2 =  endTime2 - startTime2;
-        g1.getPrimes().forEach((prime)-> System.out.println(prime));
-        g2.getPrimes().forEach((prime)-> System.out.println(prime));
+        g1.getPrimes();
+        g2.getPrimes();
 
         System.out.println("Execution time in milliseconds: " + timeElapsed2); // 597 ms
     }
@@ -45,7 +45,7 @@ public class Main {
         t.join();
         long endTime = System.currentTimeMillis();
         long timeElapsed =  endTime - startTime;
-        g.getPrimes().forEach((prime)-> System.out.println(prime));
+        g.getPrimes();
         System.out.println("Execution time in milliseconds: " + timeElapsed); // 890 ms
     }
 
@@ -66,10 +66,10 @@ public class Main {
         long endTime2 = System.currentTimeMillis();
         long timeElapsed2 =  endTime2 - startTime2;
 
-        g1.getPrimes().forEach((prime)-> System.out.println(prime));
-        g2.getPrimes().forEach((prime)-> System.out.println(prime));
-        g3.getPrimes().forEach((prime)-> System.out.println(prime));
-        g4.getPrimes().forEach((prime)-> System.out.println(prime));
+        g1.getPrimes();
+        g2.getPrimes();
+        g3.getPrimes();
+        g4.getPrimes();
 
         System.out.println("Execution time in milliseconds: " + timeElapsed2); // 387ms
     }
@@ -97,14 +97,15 @@ public class Main {
         long endTime2 = System.currentTimeMillis();
         long timeElapsed2 =  endTime2 - startTime2;
 
-        g1.getPrimes().forEach((prime)-> System.out.println(prime));
-        g2.getPrimes().forEach((prime)-> System.out.println(prime));
-        g3.getPrimes().forEach((prime)-> System.out.println(prime));
-        g4.getPrimes().forEach((prime)-> System.out.println(prime));
-        g5.getPrimes().forEach((prime)-> System.out.println(prime));
-        g6.getPrimes().forEach((prime)-> System.out.println(prime));
-        g7.getPrimes().forEach((prime)-> System.out.println(prime));
-        g8.getPrimes().forEach((prime)-> System.out.println(prime));
+		g1.getPrimes();
+        g2.getPrimes();
+        g3.getPrimes();
+        g4.getPrimes();
+        g5.getPrimes();
+        g6.getPrimes();
+        g7.getPrimes();
+        g8.getPrimes();
+        
 
         System.out.println("Execution time in milliseconds: " + timeElapsed2); // 359ms
     }
@@ -152,14 +153,22 @@ public class Main {
         long endTime = System.currentTimeMillis();
         long timeElapsed =  endTime - startTime;
 
-        g1.getPrimes().forEach((prime)-> System.out.println(prime));
-        g2.getPrimes().forEach((prime)-> System.out.println(prime));
-        g3.getPrimes().forEach((prime)-> System.out.println(prime));
-        g4.getPrimes().forEach((prime)-> System.out.println(prime));
-        g5.getPrimes().forEach((prime)-> System.out.println(prime));
-        g6.getPrimes().forEach((prime)-> System.out.println(prime));
-        g7.getPrimes().forEach((prime)-> System.out.println(prime));
-        g8.getPrimes().forEach((prime)-> System.out.println(prime));
+        g1.getPrimes();
+        g2.getPrimes();
+        g3.getPrimes();
+        g4.getPrimes();
+        g5.getPrimes();
+        g6.getPrimes();
+        g7.getPrimes();
+        g8.getPrimes();
+		g9.getPrimes();
+        g10.getPrimes();
+        g11.getPrimes();
+        g12.getPrimes();
+        g13.getPrimes();
+        g14.getPrimes();
+        g15.getPrimes();
+        g16.getPrimes();
 
         System.out.println("Execution time in milliseconds: " + timeElapsed); // 291ms
     }
