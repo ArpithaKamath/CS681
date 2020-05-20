@@ -9,9 +9,9 @@ public class Main {
 	public static void main(String []args)
 	{
 		ArrayList<Car> cars = new ArrayList<Car>();
-		Car c1 = new Car("Honda", 30000, 2013, 22,"CRV");
+		Car c1 = new Car("Honda", 30000, 2013, 22,"CRVXS4");
 		Car c2 = new Car("Kia", 29000, 2014, 15,"Escape");
-		Car c3 = new Car("Audi", 60000, 2015, 11,"R8");
+		Car c3 = new Car("Audi", 60000, 2015, 11,"AUDI-R8");
 		Car c4 = new Car("BMW",65000, 2016, 9,"CX-5");
 		
 		cars.add(c1);
